@@ -83,11 +83,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.vendor.mtk_trustonic_tee_support=1 \
     keymaster_ver=4.1
 
-# Boot control HAL
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-mtkimpl \
-    android.hardware.boot@1.2-mtkimpl.recovery
-
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
