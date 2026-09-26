@@ -10,6 +10,8 @@ on init
 	# Manually set ro.board.api_level to avoid keymint crashing because of this prop being empty.
 	setprop ro.board.api_level 202404
 	
+	start vendor.boot-default
+	
 on fs
 	write /proc/bootprof "INIT:fs"
 	install_keyring
@@ -55,6 +57,15 @@ service vendor.keymint-trustonic /vendor/bin/hw/android.hardware.security.keymin
     user root
 	group root
     seclabel u:r:recovery:s0
+
+# MTK AIDL Boot HAL
+service vendor.boot-default /vendor/bin/hw/android.hardware.boot-service.mtk
+    class early_hal
+    user root
+    group root
+    interface aidl android.hardware.boot.IBootControl/default
+    seclabel u:r:recovery:s0
+
 
 # Override Health HAL service definition.
 service vendor.health-default /system/bin/hw/android.hardware.health-service.example_recovery
