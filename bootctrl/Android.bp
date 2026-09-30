@@ -42,17 +42,12 @@ cc_binary {
     header_libs: [
         "device_kernel_headers"
     ],
-
-    vintf_fragment_modules: [
-        "android.hardware.boot-service.mediatek.xml",
-    ],
 }
 
 cc_binary {
     name: "android.hardware.boot-service.mediatek_recovery",
     defaults: ["android.hardware.boot-service_mediatek_common"],
     init_rc: ["android.hardware.boot-service.mediatek_recovery.rc"],
-    vintf_fragment_modules: ["android.hardware.boot-service.mediatek.xml.recovery"],
     recovery: true,
 
     shared_libs: [
@@ -67,16 +62,4 @@ cc_binary {
     header_libs: [
         "device_kernel_headers"
     ],
-}
-
-vintf_fragment {
-    name: "android.hardware.boot-service.mediatek.xml.recovery",
-    src: "android.hardware.boot-service.mediatek.xml",
-    recovery: true,
-}
-
-vintf_fragment {
-    name: "android.hardware.boot-service.mediatek.xml",
-    src: "android.hardware.boot-service.mediatek.xml",
-    vendor: true,
 }
