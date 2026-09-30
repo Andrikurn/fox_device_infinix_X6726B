@@ -80,6 +80,10 @@ PRODUCT_PACKAGES += \
 	android.hardware.fastboot@1.0-impl-mock.recovery \
     fastbootd
 
+# create_pl_dev
+PRODUCT_PACKAGES += \
+    create_pl_dev
+
 # MediaTek's AIDL boot control HAL
 PRODUCT_PACKAGES += \
 	android.hardware.boot-service.mediatek_recovery
