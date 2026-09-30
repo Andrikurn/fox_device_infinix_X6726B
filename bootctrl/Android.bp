@@ -13,6 +13,9 @@ cc_defaults {
     name: "android.hardware.boot-service_mediatek_common",
     relative_install_path: "hw",
     defaults: ["libboot_control_defaults"],
+	cflags: [
+	    "-Wno-error=unused-label",
+	],
     srcs: [
         "main.cpp",
         "BootControl.cpp",
