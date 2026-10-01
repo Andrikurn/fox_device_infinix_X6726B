@@ -88,6 +88,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1
 
+# mtk_plpath_utils
+PRODUCT_PACKAGES += \
+    mtk_plpath_utils
+
 # Security
 PRODUCT_PACKAGES += \
     android.hardware.security.secureclock-V1-ndk_platform \

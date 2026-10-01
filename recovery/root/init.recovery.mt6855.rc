@@ -11,7 +11,11 @@ on fs
 	write /proc/bootprof "INIT:fs"
 	install_keyring
     start adbd
-	
+
+on post-fs
+    write /proc/bootprof "INIT:post-fs"
+    start mtk.plpath.utils.link
+
 on property:ro.crypto.state=encrypted && property:ro.boot.dynamic_partitions=true
 	start mobicore
 
@@ -38,6 +42,13 @@ service vendor.keymint-trustonic /vendor/bin/hw/android.hardware.security.keymin
     user root
 	group root
     seclabel u:r:recovery:s0
+
+# MTK plpath utils
+service mtk.plpath.utils.link /system/bin/mtk_plpath_utils
+    class main
+    user root
+    group root system
+    seclabel u:r:update_engine:s0
 
 # Override keystore2 service definition.	
 service keystore2 /system/bin/keystore2 /tmp/misc/keystore
