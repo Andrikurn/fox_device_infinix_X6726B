@@ -82,14 +82,12 @@ PRODUCT_PACKAGES += \
 
 # Health HAL
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.example \
-    android.hardware.health-service.example_recovery
+    android.hardware.health@2.1
 
 # Security
 PRODUCT_PACKAGES += \
-    android.hardware.security.rkp-V3-ndk \
-    android.hardware.security.secureclock-V1-ndk \
-    android.hardware.security.sharedsecret-V1-ndk
+    android.hardware.security.secureclock-V1-ndk_platform \
+    android.hardware.security.sharedsecret-V1-ndk_platform
 
 # Keystore2
 PRODUCT_PACKAGES += \
@@ -97,11 +95,11 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper-V1-ndk
+    android.hardware.gatekeeper@1.0
 
 # Keymint
 PRODUCT_PACKAGES += \
-    android.hardware.security.keymint-V3-ndk
+    android.hardware.security.keymint-V1-ndk_platform
 
 # Update engine
 PRODUCT_PACKAGES += \

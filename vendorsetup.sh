@@ -22,7 +22,6 @@
 device_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 workspace_root="$(cd "${device_dir}/../../.." && pwd)"
 vibration_patch_file="${device_dir}/patches/01-patch-vibration.patch"
-health_patch_file="${device_dir}/patches/02-patch-health-hal.patch"
 
 export ALLOW_MISSING_DEPENDENCIES=true
 
@@ -42,12 +41,10 @@ elif ! command -v patch >/dev/null 2>&1; then
 elif (
     cd "${workspace_root}" &&
 	patch -p1 -N --dry-run --silent < "${vibration_patch_file}" >/dev/null 2>&1
-    patch -p1 -N --dry-run --silent < "${health_patch_file}" >/dev/null 2>&1
 ); then
     if (
         cd "${workspace_root}" &&
 		patch -p1 -N --silent < "${vibration_patch_file}" >/dev/null 2>&1
-        patch -p1 -N --silent < "${health_patch_file}" >/dev/null 2>&1
     ); then
         echo "[X6726B] Applied patches."
     else
