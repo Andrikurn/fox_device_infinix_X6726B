@@ -10,8 +10,6 @@ on init
 	# Manually set ro.board.api_level to avoid keymint crashing because of this prop being empty.
 	setprop ro.board.api_level 202404
 	
-	start vendor.boot-mediatek
-	
 on fs
 	write /proc/bootprof "INIT:fs"
 	install_keyring

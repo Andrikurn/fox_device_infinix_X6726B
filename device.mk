@@ -84,10 +84,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     create_pl_dev
 
-# MediaTek's AIDL boot control HAL
-PRODUCT_PACKAGES += \
-	android.hardware.boot-service.mediatek_recovery
-
 # Health HAL
 PRODUCT_PACKAGES += \
     android.hardware.health-service.example \
