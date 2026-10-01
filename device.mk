@@ -80,6 +80,10 @@ PRODUCT_PACKAGES += \
 	android.hardware.fastboot@1.0-impl-mock.recovery \
     fastbootd
 
+# Boot control HAL
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2
+
 # Health HAL
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1
