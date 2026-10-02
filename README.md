@@ -17,7 +17,7 @@ Memory                  | 6/8 GB RAM
 Storage                 | 128/256 GB (UFS)
 MicroSD                 | microSDXC (dedicated slot)
 Shipped Android Version | 15.0
-Battery                 | Non-removable 52000 mAh
+Battery                 | Non-removable 5200 mAh
 Display                 | 720 x 1600 pixels (~262 ppi density), 6.7 inches
 Camera                  | 50 MP (wide); 8 MP (front, wide)
 
