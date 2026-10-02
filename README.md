@@ -36,19 +36,19 @@ Camera                  | 50 MP (wide); 8 MP (front, wide)
 
 ## Building
 
-Sync OrangeFox 14.1 Manifest:
+Sync OrangeFox 12.1 Manifest:
 
 ```
 git clone https://gitlab.com/OrangeFox/sync.git
 cd sync
-./orangefox_sync.sh --branch 14.1 --path "~/YOUR/PATH/HERE"
+./orangefox_sync.sh --branch 12.1 --path "~/YOUR/PATH/HERE"
 ```
 
 Clone the device tree:
 
 ```
 cd ~/YOUR/PATH/HERE
-git clone https://github.com/Andrikurn/fox_device_infinix_X6726B.git -b fox_14.1 ./device/infinix/X6726B
+git clone https://github.com/Andrikurn/fox_device_infinix_X6726B.git -b fox_12.1 ./device/infinix/X6726B
 ```
 
 Build:
@@ -56,5 +56,5 @@ Build:
 ```
 export ALLOW_MISSING_DEPENDENCIES=true
 source build/envsetup.sh
-lunch fox_X6726B-ap2a-eng && mka adbd vendorbootimage
+lunch fox_X6726B-eng && mka adbd vendorbootimage
 ```
