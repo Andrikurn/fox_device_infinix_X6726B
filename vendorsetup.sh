@@ -32,9 +32,7 @@ export FOX_INSTALLER_VENDOR_BOOT_RAMDISK_INSTALL=1
 export FOX_USE_ZSTD_BINARY=1
 export FOX_USE_DMSETUP=1
 
-if [[ ! -f "${health_patch_file}" ]]; then
-    echo "[X6726B] Missing patch: ${health_patch_file}"
-elif [[ ! -f "${vibration_patch_file}" ]]; then
+if [[ ! -f "${vibration_patch_file}" ]]; then
     echo "[X6726B] Missing patch: ${vibration_patch_file}"
 elif ! command -v patch >/dev/null 2>&1; then
     echo "[X6726B] Missing required command: patch"
@@ -54,4 +52,4 @@ else
     echo "[X6726B] Patches already applied or not applicable"
 fi
 
-unset device_dir workspace_root patch_file
+unset device_dir workspace_root vibration_patch_file
